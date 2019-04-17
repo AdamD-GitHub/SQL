@@ -9,5 +9,14 @@ $SQLstring = "CREATE TABLE $TableName
 	      last_name VARCHAR(40), 
 	      first_name VARCHAR(40))"; 
 
+/* Insert rows to table */
+$LastName = stripslashes($_POST['last_name']); 
+$FirstName = stripslashes($_POST['first_name']); 
+$SQLstring = "INSERT INTO $TableName VALUES
+	     (NULL, 
+	     '$LastName', 
+	     '$FirstName')";
 
-	  
+/* Select all rows */
+$TableName = "visitors";
+$SQLstring = "SELECT * FROM $TableName";
